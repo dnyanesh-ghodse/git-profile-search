@@ -9,13 +9,26 @@ const main = document.getElementById('main')
 async function getUser(username) {
     try{
        const {data} = await axios.get(APIURL + username)
-
+        main.innerHTML = "<h1>Hijsdkjfjkl</h1>"
         createUserCard(data);
 
     } catch(err){
-        console.log(err);
+        if(err.response.status == 404){
+            createErrorCard("User Not Found")
+        }
     }
 
+}
+
+function createErrorCard(msg){
+    const cardHTML = `
+        <div>
+            <h1 style="color: red">${msg}</h1>
+            <img src="./404.jpg" alt="404" width="200px">
+        </div>
+    `
+
+    main.innerHTML = cardHTML;
 }
 
 

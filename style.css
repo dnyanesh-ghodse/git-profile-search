@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 body{
     font-family: 'Poppins', sans-serif;
     background-color: rgb(255, 255, 255);
@@ -16,6 +17,26 @@ body{
     overflow: hidden;
     margin: 0;
 }
+
+
+
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(21, 63, 21);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header img{
+    width: 100px;
+    background-color: rgb(158, 110, 110);
+}
+
+
 
 .user-form{
     width: 100%;
